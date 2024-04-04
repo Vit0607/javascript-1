@@ -1,13 +1,10 @@
-const user = {
-	name: 'Вася',
-	surname: 'Пупкин',
-	age: 24,
-	getFullName: function () {
-		return this.name + ' ' + this.surname;
-	}
-};
+/* отсортировать пользователей по возрасту */
 
-console.log(user.getFullName());
-const arr = [1, 2];
-arr.sort();
-'23423SSEDS4'.toLowerCase();
+const users = [
+	{ name: 'Вася', age: 30 },
+	{ name: 'Катя', age: 18 },
+	{ name: 'Аня', age: 40 },
+	{ name: 'Петя', age: 25 },
+];
+
+console.log(users.sort((a, b) => a.age - b.age));
