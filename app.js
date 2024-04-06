@@ -1,21 +1,17 @@
-let user = {
-	name: 'Вася',
-	age: 40,
-	city: 'Moscow'
-};
+const cities = {
+	msk: {
+		temp: {
+			celcius: 25
+		}
+	},
+	spb: {
 
-const { age, ...userWithoutAge } = user;
-console.log(age);
-console.log(userWithoutAge);
-
-const additionalData = {
-	skills: ['Разработка', 'Дизайн'],
-	creditCard: '2342-2345-2734-2356'
-};
-
-user = {
-	...user,
-	...additionalData
+	}
 }
 
-console.log(user);
+const city = 'msk';
+if (cities[city] != undefined && cities[city].temp != undefined) {
+	console.log(cities[city].temp.celcius);
+}
+
+console.log(cities[city]?.temp?.celcius);
