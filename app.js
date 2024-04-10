@@ -1,20 +1,25 @@
-function addUser() {
-	// console.log('User added');
+'use strict';
+
+const user = {
+	firstName: 'Вася',
+	lastName: 'Пупкин',
+	age: 20,
+	getUserInfo: function () {
+		console.log(`${this.firstName} ${this.lastName}`);
+
+		const canDrink = () => {
+			if(this.age >= 18) {
+				console.log('Может уже пить!');
+			} else {
+				console.log('Не может пить!');
+			}
+		}
+		canDrink();
+	},
+	getUserInfoArrov: () => {
+		console.log(this);
+		console.log(`${this.firstName} ${this.lastName}`);
+	}
 }
 
-let arr1 = () => {
-	console.log('arr1');
-}
-
-addUser();
-console.log(b);
-let a = 3;
-var b = 2;
-console.log(b);
-
-
-arr1();
-
-
-
-addUser();
+user.getUserInfo();
