@@ -1,23 +1,17 @@
 'use strict';
-/*
-	Создайте объект пользователя с паролем.
-	С помощью функции ниже удалить пароль сделав
-	функцию сброса пароля
- */
 
-function removePassword(reset) {
-	if (reset) {
-		this.password = undefined;
-	} else {
-		this.password = '1';
+function changeBalance() {
+	let balance = 0;
+	return function(sum) {
+		balance += sum;
+		console.log(`Баланс: ${balance}`);
 	}
 }
 
-const user = {
-	login: 'a@a.ru',
-	password: '12345'
-};
+const change = changeBalance();
 
-const resetUserPassword = removePassword.bind(user, true);
-resetUserPassword();
-console.log(user);
+change(100);
+change(-50);
+change(200);
+
+console.dir(change);
